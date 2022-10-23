@@ -1,0 +1,26 @@
+def linearsearch(lst,n):
+    notfound = 0
+    search = int(input("enter element to be searched\n"))
+    for j in range(n):
+        if search == lst[j]:
+            pos = j
+            print("element found at",j,"th position")
+            break
+        else :
+            notfound = 1
+    if notfound == 1:
+        print("element not found")
+
+j = ''
+lst = []
+n = int(input("enter the number of elements\n"))
+print("enter",n,"elements")
+for i in range(n):
+    ele = int(input())
+    lst.append(ele)
+
+mode =input("enter mode of search\n")
+if mode == 'linear' or mode == 'linearsearch' or mode == 'linear search':
+    linearsearch(lst,n)
+else:
+    print("invalid")
